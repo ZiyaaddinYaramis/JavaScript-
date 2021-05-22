@@ -244,7 +244,9 @@ const a = null;
 console.log(x && y && z && a); // undefined
 // ! jS DE && DE   !!!! ILK GÖRDUGU TRUE HARICI DEGERI DÖNDURUR !!!
 
-// ! && de 0, false, null, undefined, " " ve Nan disindaki durumlar true kabuledilir
+// ! && de 0, false, null, undefined, "" ve Nan disindaki durumlar true kabuledilir
+
+// ! JS de 0, false, null, undefined, "" ve Nan disindaki boolean karsiligi true'dur
 
 //  ==      İki değişkenin veri tipine bakmaksızın eşitliğini kontrol eder. Eşitse true  aksi takdirde false döndürür.
 
@@ -291,7 +293,8 @@ console.log(s4 && s3); // null
 console.log(s4 || s3); // true
 
 // ÖNEMLİ: 0, FALSE, NULL, undefined, "" ve NaN dışındaki durumlar TRUE kabul edilir.
-//NULL, undefined, NaN  ---> JS False kabul eder AMA CONSOLA NULL, undefined, NaN YAZDIRIR.
+// NULL, undefined, NaN  ---> JS False kabul eder AMA CONSOLA NULL, undefined, NaN YAZDIRIR.
+// NaN (Sayi degil - Not a Number)
 
 s4 = "kuş";
 s3 = "kedi";
@@ -365,3 +368,19 @@ console.log(result);
 // ÖRNEK
 const sayi4 = 41;
 console.log(String(sayi4), sayi4);
+console.log(typeof sayi4); // number
+console.log(typeof String(sayi4)); // string
+
+// String(sayi4) ==> String() fonksiyonu yani String'e cevirdik
+
+// ! JS de 0, false, null, undefined, "" ve Nan disindaki boolean karsiligi true'dur
+
+const sifir = 0;
+nal = null;
+const tanimsiz = undefined;
+const bos = " "; // Dikkat "" degil
+sayiDegil = NaN;
+
+console.log(Boolean(sifir), Boolean(nal)); // false false
+console.log(Boolean(tanimsiz), Boolean(bos)); // false true
+console.log(Boolean(sayiDegil)); //false
