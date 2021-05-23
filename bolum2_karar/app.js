@@ -97,8 +97,8 @@ for (let i = 1; i <= sayi; i++) {
 
 // ORNEK: Asal sayı tespiti
 // 1 ve kendisinden baska böleni olmayan sayiya asal sayi denilir
-// const number = number(prompt("Sayiyi giriniz");
 
+// const number = number(prompt("Sayiyi giriniz");
 const number = 10;
 
 let asal = true;
@@ -110,3 +110,39 @@ for (let i = 2; i < number; i++) {
 }
 const sonuc1 = asal ? "ASAL" : "ASAL DEGIL";
 console.log(sonuc1);
+
+//ÖRNEK: do- while döngüsü
+let not;
+do {
+  not = prompt("0-100 arasında bir not giriniz:");
+} while (not < 0 || not > 100);
+console.log("Giridiğiniz not 0-100 arasındadır");
+
+// ÖRNEK: while döngüsü
+
+// ! sart false oldugu surece calisir true olunca döngu kirilir
+let not;
+not = prompt("0-100 arasında bir not giriniz:");
+while (not < 0 || not > 100) {
+  console.error("Girilen not 0-100 arasında olmalıdır.");
+  not = prompt("0-100 arasında bir not giriniz:");
+}
+console.log("Giridiğiniz not 0-100 arasındadır");
+
+// ÖRNEK: klavyeden Q karakteri girilene kadar not girişi yapan bir programı döngü kullanarak yazınız.
+
+let not1;
+let i = 1;
+// let not1 , i=1; ==> DIGER BIR YOL
+
+while (true) {
+  not1 = prompt(i + ".kisinin notunu giriniz:");
+  not1 = not1.toLowerCase(); // girilen karakteri küçük harfe çeviriyoruz.
+  if (not1 == "q") {
+    break; // if sarti true oldugu an  break dönguyu kirar ve disari atar
+  }
+  i++;
+  console.log(Number(not1));
+}
+
+/* While (true) ==>  while'in ici true oldugu surece  döngu calisir yani bu döngu normalde sonsuz döngudur. Bizde  bu dönguyu if ile kiracagiz bununda en kolay yolu break; 'dir*/
