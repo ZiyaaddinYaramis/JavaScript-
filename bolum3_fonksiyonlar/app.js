@@ -2,7 +2,9 @@
 // *                  FONKSIYONLAR
 // * =======================================================
 
-// ! 1.YONTEM : FUNCTION DECLARATION
+// * =======================================================
+// *           ! 1.YONTEM : FUNCTION DECLARATION
+// * =======================================================
 
 // Fonksiyonun tanimlanmasi
 function yazdir() {
@@ -29,6 +31,10 @@ const yas = yasHesapla(1995); // 1. yol Degiskene atayarak yazdirma
 console.log(`Yasiniz ${yas}`); // Degiskene atayarak yazdirma
 
 console.log(`Yasiniz ${yasHesapla(1990)}`); // 2. yol
+
+// * =======================================================
+// *
+// * =======================================================
 
 // Ornek: Klavyeden girilen sayinin tek veya cift oldugunu donduren bir fonksiyon yaziniz.
 
@@ -63,7 +69,9 @@ function tekCift(sayi) {
 
 console.log(tekCift(sayi));
 
-// ! 2. YONTEM : FUNCTION EXPRESSION
+// * =======================================================
+// *         ! 2. YONTEM : FUNCTION EXPRESSION
+// * =======================================================
 
 // * ("2. yontem 1. yonteme göre daha yaygindir")
 
@@ -74,6 +82,10 @@ const tekCift1 = function (sayi) {
 console.log(tekCift1(5)); // invoke
 
 // * 2. YÖNTEMDE  METHOD CALL YANI FONKSIYON CAGIRMA (INVOKE) FONSIYON'DAN SONRA YAZILMALIDIR AKSI HALDE HATA VERIR.
+
+// * =======================================================
+// *
+// * =======================================================
 
 // ORNEK: Buyuk sayiyi bulma
 let buyukBul = function (x, y, z) {
@@ -90,7 +102,9 @@ let buyukBul = function (x, y, z) {
 
 console.log("En büyük:" + buyukBul(5, 3, 8));
 
-// ! 3.YÖNTEM  : ARROW (OK) FONKSIYONLARI
+// * =======================================================
+// *       ! 3.YÖNTEM  : ARROW (OK) FONKSIYONLARI
+// * =======================================================
 
 const topla = (a, b) => a + b; // Arrow fonk tanimlamasi
 
@@ -105,8 +119,12 @@ console.log(ciftMi(2));
 // * Ornek: Us alma
 const taban = prompt("taban giriniz");
 const us = prompt("us giriniz");
-const usAl = (t, u) => t ** u;
+const usAl = (t, u) => t ** u; // kisa isimler kullanabilirsiniz
 console.log(usAl(taban, us));
+
+// * =======================================================
+// *
+// * =======================================================
 
 // * Ornek: Menü
 // ! Ok fonksiyonunda birden fazla ifade var ise fonksiyonda suslu parantez kullanmalıyız.
@@ -114,9 +132,14 @@ const menu = () => {
   console.log("===============================");
   console.log("      JAVASCRIPT DERSI         ");
   console.log("===============================");
+  // return ==> yazmaya gerek yok cunku birsey dondurmeyecegiz
 };
 
 menu();
+
+// * =======================================================
+// *
+// * =======================================================
 
 // Ornek: Bilgi Ver fonksiyonu
 // * 1.YÖNTEM
@@ -131,12 +154,18 @@ const bilgiVer = (ad, soyad, dogum) =>
 
 console.log(bilgiVer("Mehmet", "Cakmak", 1989));
 
+// * =======================================================
+// *
+// * =======================================================
+
 // * ORNEK: Silindirin hacmini hesaplayan bir fonksiyon yaziniz.
 const r = prompt("Yaricapi giriniz:");
 const h = prompt("Yukseklik giriniz:");
 
 const hacimHesapla = (r, h) => Math.PI * r * r * h;
-// * En yakın sayiya yuvarlar.
+
+// * En yakın sayiya yuvarlar. ==> Math.round()
 console.log("Silindir Hacmi:" + Math.round(hacimHesapla(r, h)));
-// * Virgulden sonra 2 basamak alir.
+
+// * Virgulden sonra 2 basamak alir. ==> toFixed(2) 2 OPSIYONEL
 console.log("Silindir Hacmi:" + hacimHesapla(r, h).toFixed(2));
