@@ -7,7 +7,7 @@
   </head>
   <body>
     <!---->
-
+    <!--=============================================================-->
     <label for="r">Yaricapi giriniz:</label>
     <!--imput önune yazimizi yazdik. label olusturduk-->
     <input type="number" id="r" value="" /> <br />
@@ -15,7 +15,9 @@
     <br />
     <!--Alt satira gectik-->
     <!--input'a id="r" verdik  ve  Yaricapi giriniz yazili label ile (for="r") bagladik -->
+    <!--=============================================================-->
 
+    <!--=============================================================-->
     <label for="h">Yukseklik giriniz:</label>
     <!--imput önune yazimizi yazdik. label olusturduk-->
     <input type="number" class="h" /> <br />
@@ -23,18 +25,28 @@
     <br />
     <!--Alt satira gectik-->
     <!--input'a class="h" verdik  ve  Yukseklik giriniz: yazili label ile (for="h") bagladik -->
+    <!--=============================================================-->
 
+    <!--=============================================================-->
     <h1>HACIM=<span class="hacim">0</span></h1>
-
     <!--icinde HACIM= yazan bir h1 olusturduk. Bu h1 in icine  direk bir inline olarak deger girilsin diye 
     span inline etiketini kullandik (span inline bir etikettir en son cursor'un kaldigi yere yazdirir
     ve class="hacim" ile sonradan style verebilmek icin class atadik. Bu inline span etiketimize ise 
     baslangic degeri 0 olsun diye 0 yazdik.) -->
+    <!--=============================================================-->
+
+    <!--=============================================================-->
     <button class="btn" onclick="hesapla()">Hesapla</button>
+
     <!--hesapla isminde bir buton olusturduk ve class="btn" ile btn isminde bir class verdik -->
+
+    <!--onclick="hesapla()"  ==> bu bir events'dir buton'a click yaptigimizda hesapla() fonksiyonu calisacak. hesapla() fonksiyonu app.js deki Js kodudur -->
+    <!--=============================================================-->
+
     <!-- !! javascript ile ulasmak istedigimiz  herseye bir class veya id vermeliyiz. 
       ! Not: class verdigimizde birden fazla elemana erisebiliriz. id verdigimizde ancak bir elemana erisebiliriz -->
 
     <script src="app.js"></script>
+    <!-- app.js ile index.html yi bagladik-->
   </body>
 </html>
